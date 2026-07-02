@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Happy Birthday Tamilll❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#1d2b64,#f8cdda);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+/* Stars */
+
+.star{
+position:fixed;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2;}
+50%{opacity:1;}
+}
+
+.container{
+padding:60px 20px;
+}
+
+h1{
+font-size:50px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 25px gold;}
+}
+
+.subtitle{
+margin-top:15px;
+font-size:22px;
+}
+
+#countdown{
+margin:30px;
+font-size:35px;
+font-weight:bold;
+color:yellow;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+background:#ff4b7d;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.hidden{
+display:none;
+margin-top:40px;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* Cake */
+
+.cake{
+font-size:120px;
+margin:20px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+50%{transform:translateY(-10px);}
+}
+
+/* Gallery */
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.gallery img{
+width:220px;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,255,255,.5);
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+.letter{
+max-width:700px;
+margin:auto;
+padding:25px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+font-size:20px;
+line-height:1.8;
+backdrop-filter:blur(10px);
+margin-top:40px;
+}
+
+/* Floating Hearts */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎉Advance wishes!! 🎉</h1>
+
+<p class="subtitle">
+A little surprise made with lots of love ❤️
+</p>
+
+<div id="countdown"></div>
+
+<button onclick="showSurprise()">
+🎁 Open Your Surprise
+</button>
+
+<div class="hidden" id="surprise">
+
+<div class="cake">🎂</div>
+
+<h2>Wishing You Endless Happiness!</h2>
+
+<div class="gallery">
+
+<img src="photo 1.jpeg">
+
+<img src="photo 2.jpeg">
+
+<img src="photo 3.jpeg">
+
+</div>
+
+<div class="letter">
+
+<h2>💌 A Letter For You</h2>
+
+<p>
+
+Dear Brother,
+
+
+🎂 Advance Happy Birthday!
+
+The countdown has already begun! I hope your upcoming birthday is filled with love, laughter, surprises, and everything you've been wishing for. You deserve nothing but the very best.
+
+Can't wait to celebrate your special day! 🎉❤️
+</p>
+
+</div>
+
+</div>
+
+<audio autoplay loop controls style="margin-top:40px;">
+<source src="song.mpeg" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+// Countdown
+
+var birthday=new Date("July 12, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+var now=new Date().getTime();
+
+var distance=birthday-now;
+
+var days=Math.floor(distance/(1000*60*60*24));
+
+var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+var mins=Math.floor((distance%(1000*60*60))/(1000*60));
+
+var sec=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML=
+days+" Days "+
+hours+" Hours "+
+mins+" Minutes "+
+sec+" Seconds";
+
+},1000);
+
+
+// Show Surprise
+
+function showSurprise(){
+
+document.getElementById("surprise").style.display="block";
+
+confetti();
+
+}
+
+// Stars
+
+for(let i=0;i<150;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDelay=Math.random()*2+"s";
+
+document.body.appendChild(star);
+
+}
+
+// Hearts
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),6000);
+
+},400);
+
+
+// Simple Confetti
+
+function confetti(){
+
+for(let i=0;i<250;i++){
+
+let c=document.createElement("div");
+
+c.style.position="fixed";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.top="-10px";
+
+c.style.width="10px";
+
+c.style.height="10px";
+
+c.style.background=["red","yellow","blue","green","pink","orange"][Math.floor(Math.random()*6)];
+
+c.style.borderRadius="50%";
+
+c.style.animation="fall 4s linear forwards";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),4000);
+
+}
+
+}
+
+let style=document.createElement("style");
+
+style.innerHTML=`
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+opacity:0;
+}
+}
+`;
+
+document.head.appendChild(style);
+
+</script>
+
+</body>
+</html>
